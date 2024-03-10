@@ -5,6 +5,7 @@ import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage.js';
 import CampsiteDetailPage from './pages/CampsiteDetailPage.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
+import AboutPage from './pages/AboutPage.js';
 import './App.css';
 
 function App() {
@@ -18,12 +19,13 @@ function App() {
             <Route 
               path='/directory/:campsiteId'
               element={<CampsiteDetailPage />}
-
+              />
+            <Route 
+              path='/about'
+              element={<AboutPage />}
               />
           </Routes>
         <Footer />
-        
-
     </div>
   );
 }

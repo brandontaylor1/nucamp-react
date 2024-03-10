@@ -7,7 +7,7 @@ h2,
 h3,
 .card-body > .card-title {
   font-family: 'Lobster', cursive;
-  color: white;
+  /* color: white; */
 }
 
 .card-title {
