@@ -9,7 +9,6 @@ const ContactForm = () => {
         resetForm();
     }
     
-    
     return (
         <Formik
             initialValues={{
@@ -22,6 +21,7 @@ const ContactForm = () => {
                 feedback: ''
             }}
             onSubmit={handleSubmit}
+            
             >
             <Form>
                 <FormGroup row>
