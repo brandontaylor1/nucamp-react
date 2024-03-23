@@ -10,7 +10,7 @@ const CommentsList = ({campsiteId}) => {
             return (
                 <Col md='5' className='m-1' >
                     <h4>Comments</h4>
-                    {comments.map((comment) => (
+                    {comments.map((comment, index) => (
                         <Comment key={comment.id} comment={comment} /> 
                     ))}
                     <CommentForm campsiteId={campsiteId}/>
