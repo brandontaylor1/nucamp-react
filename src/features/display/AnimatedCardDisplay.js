@@ -8,7 +8,7 @@ const AnimatedDisplayCard = ({item}) => {
 
     console.log("These are the items: " + item)
 
-    const { image, name, description } = item
+    const { name, image, description } = item
     const [ toggle, setToggle ] = useState(false);
 
     const animatedStyle = useSpring({

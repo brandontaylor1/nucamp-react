@@ -1,4 +1,7 @@
 import { Card, CardImg, CardText, CardBody, Col} from 'reactstrap';
+import Error from '../../components/Error.js'
+import Loading from '../../components/Loading.js'
+let content = null; 
 
 const CampsiteDetail = ({campsite}) => {
     const { image, name, description } = campsite
