@@ -45,8 +45,12 @@ const campsitesSlice = createSlice({
 export const campsitesReducer = campsitesSlice.reducer;
 
 export const selectAllCampsites = (state) => {
-    return state.campsites.campsitesArray;
-}
+    return {
+        featuredItem: state.campsites.campsitesArray.find((campsite) => campsite.featured),
+        isLoading: state.campsites.isLoading,
+        errMsg: state.campsites.errMsg 
+    };
+};
 
 export const selectCampsiteById = (id) => (state) => {
     return state.campsites.campsitesArray.find((campsite) => (campsite.id === parseInt(id)))

@@ -4,7 +4,7 @@ import { animated, useSpring } from 'react-spring'
  
 
 
-const AnimatedDisplayCard = ({item}) => {
+const AnimatedDisplayCard = ( item ) => {
 
     console.log("These are the items: " + item)
 

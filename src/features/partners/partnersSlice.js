@@ -39,7 +39,7 @@ const partnersSlice = createSlice({
         }, 
         [fetchPartners.rejected]: (state, action) => {
             state.isLoading = false;
-            state.errMsg = action.error ? error.message : 'Failed to Fetch';
+            state.errMsg = action.error ? action.error.message : 'Failed to Fetch';
         }
     }
 })
@@ -47,7 +47,11 @@ const partnersSlice = createSlice({
 export const partnersReducer = partnersSlice.reducer;
 
 export const selectAllPartners = (state) => {
-    return state.partners.partnersArray;
+    return {
+        featuredItem: state.partners.partnersArray.find((partner) => partner.featured),
+        isLoading: state.partners.isLoading,
+        errMsg: state.partners.errMsg
+    };
 }
 
 export const selectFeaturedPartner = (state) => {
